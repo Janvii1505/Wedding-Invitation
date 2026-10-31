@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --color-gold: #c9953a;
+  --color-gold-light: #f5d6a0;
+  --color-gold-dark: #966f28;
+  --color-maroon: #7a1f3d;
+  --color-maroon-dark: #60172f;
+  --color-cream: #faf5f0;
+  --color-cream-card: #fdfaf5;
+  --color-text-brown: #6b4f2c;
+  --color-text-dark: #2d1407;
+}
+
+body {
+  font-family: var(--font-gujarati), var(--font-poppins), sans-serif;
+  background-color: #faf5f0;
+  color: var(--color-text-brown);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel), serif;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+}
+
+.font-script {
+  font-family: var(--font-alex-brush), cursive;
+}
+
+.font-gujarati {
+  font-family: var(--font-gujarati), serif;
+}
+
+/* Gold foil gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #966f28 0%, #c9953a 35%, #f5d6a0 50%, #c9953a 70%, #825c1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #c9953a 0%, #e8c683 50%, #b88628 100%);
+}
+
+.gold-border {
+  border-color: rgba(201, 149, 58, 0.4);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(201, 149, 58, 0.25);
+}
+
+/* Scratch card canvas styling */
+.scratch-canvas {
+  touch-action: none;
+  cursor: crosshair;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf5f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9953a;
+  border-radius: 9999px;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(201, 149, 58, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(201, 149, 58, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite;
+}
